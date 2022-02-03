@@ -15,3 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+
+mix.copy('frontend/dist/spa/index.html', 'resources/views/app.blade.php')
+.copyDirectory('frontend/dist/spa', 'public');
