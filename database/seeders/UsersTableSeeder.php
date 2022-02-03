@@ -17,8 +17,8 @@ class UsersTableSeeder extends Seeder
         //
         $admin = User::create([
             'name' => 'admin',
-            'email' => 'admin@gmail.com',
-            'password' => '$2a$12$xqMTZE.BYpng9euifhd39.VtUSklM.IX3TvJK6PU4Ov/MCMW3D2rS'
+            'email' => 'admin@mail.com',
+            'password' => '$2a$12$xqMTZE.BYpng9euifhd39.VtUSklM.IX3TvJK6PU4Ov/MCMW3D2rS' //password: 1234
         ]);
 
         $admin->assignRole('admin');
@@ -26,8 +26,8 @@ class UsersTableSeeder extends Seeder
 
         $operations = User::create([
             'name' => 'operations',
-            'email' => 'operations@gmail.com',
-            'password' => '$2a$12$xqMTZE.BYpng9euifhd39.VtUSklM.IX3TvJK6PU4Ov/MCMW3D2rS'
+            'email' => 'operations@mail.com',
+            'password' => '$2a$12$xqMTZE.BYpng9euifhd39.VtUSklM.IX3TvJK6PU4Ov/MCMW3D2rS'//password: 1234
         ]);
 
         $operations->assignRole('operations');
