@@ -10,9 +10,21 @@
         <div v-if="$can('view airlines')" class="col-12 col-md-12 q-mt-md" >
             <q-table  :data="airports" :columns="columns">
                 <template v-slot:body-cell-actions="props">
-                    <q-btn v-if="$can('update airline')" color="primary" size="md" icon="edit" round flat  @click="onEdit(props.row)"></q-btn>
-                    <q-btn v-if="$can('delete airline')" color="red" size="md" icon="delete" round flat  @click="onDelete(props.row)"></q-btn>
-                    <q-btn color="primary" size="md" icon="description" round flat  @click="goToRemarks(props.row)"></q-btn>
+                    <q-btn v-if="$can('update airline')" color="primary" size="md" icon="edit" round flat  @click="onEdit(props.row)">
+                        <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                            Editar
+                        </q-tooltip>
+                    </q-btn>
+                    <q-btn v-if="$can('delete airline')" color="red" size="md" icon="delete" round flat  @click="onDelete(props.row)">
+                        <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                            Eliminar
+                        </q-tooltip>
+                    </q-btn>
+                    <q-btn color="primary" size="md" icon="description" round flat  @click="goToRemarks(props.row)">
+                        <q-tooltip content-class="bg-indigo" :offset="[10, 10]">
+                            Observaciones
+                        </q-tooltip>
+                    </q-btn>
                 </template>
             </q-table>
         </div>

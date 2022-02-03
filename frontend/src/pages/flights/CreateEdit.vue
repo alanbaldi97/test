@@ -8,12 +8,12 @@
             <q-card-section>
                 <q-form ref="form" @submit.prevent="">
                     <q-input dense v-model="flight.code" class="q-mt-md" outlined :rules="rules" label="Código"></q-input>
-                    <q-select dense outlined class="q-mt-md" v-model="flight.type" :options="types" label="Tipo" />
-                    <q-select option-value="id" option-label="name" dense outlined class="q-mt-md" v-model="flight.departure_id" :options="airports" label="Sálida" emit-value map-options />
-                    <q-select option-value="id" option-label="name" dense outlined class="q-mt-md" v-model="flight.destination_id" :options="airports" label="Destino" emit-value map-options />
+                    <q-select dense outlined class="q-mt-md" v-model="flight.type" :options="types" :rules="rules" label="Tipo" />
+                    <q-select option-value="id" option-label="name" dense outlined class="q-mt-md" v-model="flight.departure_id" :rules="rules" :options="airports" label="Sálida" emit-value map-options />
+                    <q-select option-value="id" option-label="name" dense outlined class="q-mt-md" v-model="flight.destination_id" :rules="rules" :options="airports" label="Destino" emit-value map-options />
                     <q-input type="time" dense v-model="flight.departure_time" class="q-mt-md" outlined :rules="rules" label="Hora de sálida"></q-input>
                     <q-input type="time" dense v-model="flight.arrival_time" class="q-mt-md" outlined :rules="rules" label="Hora de llegada"></q-input>
-                    <q-select option-value="id" option-label="name" dense outlined class="q-mt-md" v-model="flight.airline_id" :options="airlines" label="Aerolinea" emit-value map-options />
+                    <q-select option-value="id" option-label="name" dense outlined class="q-mt-md" :rules="rules" v-model="flight.airline_id" :options="airlines" label="Aerolinea" emit-value map-options />
 
 
                 </q-form>
